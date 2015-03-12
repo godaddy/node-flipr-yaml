@@ -1,12 +1,9 @@
-## v1.0.0 (March ?, 2015)
+## v1.0.0 (March 12, 2015)
 
-?
+Initial release.
 
 Features:
 
-  ?
-
-Bug Fixes:
-
-  ?
-  
+  - Read flipr configuration from yaml files
+  - Can be aware of different environments and use the appropriate configuration file
+  - Validates configuration files to ensure correct syntax
