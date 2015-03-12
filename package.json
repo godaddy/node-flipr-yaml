@@ -1,0 +1,57 @@
+{
+  "name": "flipr-yaml",
+  "version": "1.0.0",
+  "description": "Flipr source to retrieve config from yaml files",
+  "main": "lib/flipr-yaml.js",
+  "scripts": {
+    "_cover": "istanbul cover --root lib --include-all-sources --report text-summary _mocha",
+    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "lint": "jshint .",
+    "open-coverage": "open ./coverage/index.html",
+    "report": "istanbul report html && istanbul report text-summary",
+    "test-debug": "mocha --debug-brk",
+    "test": "npm run lint && npm run unit && npm run report && (npm run check-coverage || npm run open-coverage)",
+    "unit": "npm run _cover -- --dir coverage/unit -- --recursive test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:godaddy/node-flipr-yaml.git"
+  },
+  "keywords": [
+    "flipr",
+    "source",
+    "yaml",
+    "feature",
+    "ab",
+    "flags",
+    "configuration",
+    "config",
+    "flip",
+    "flipping"
+  ],
+  "author": {
+    "name": "Grant Shively",
+    "email": "gshively@godaddy.com"
+  },
+  "homepage": "https://github.com/godaddy/node-flipr-yaml",
+  "bugs": "https://github.com/godaddy/node-flipr-yaml/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "flipr-validation": "../node-flipr-validation",
+    "istanbul": "^0.3.7",
+    "jshint": "^2.6.3",
+    "mocha": "^2.2.1",
+    "mocha-istanbul": "^0.2.0",
+    "proxyquire": "^1.4.0",
+    "sinon": "^1.13.0",
+    "sinon-chai": "^2.7.0"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "async-ext": "^0.4.0",
+    "js-yaml": "^3.2.7",
+    "lodash": "^3.5.0",
+    "memoizee": "^0.3.8"
+  }
+}

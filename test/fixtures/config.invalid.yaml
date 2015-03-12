@@ -1,0 +1,9 @@
+---
+someKey:
+  value:
+someKey2:
+  values: noArray
+someKey3:
+  values:
+    - percent: 50
+      value: blah

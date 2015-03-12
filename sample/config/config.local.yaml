@@ -1,0 +1,5 @@
+---
+#Used in ../environment-awareness.js example.
+#Put config here if you want to override your environment-aware config files.
+someKeyFromLocalConfig:
+  value: somevalue
