@@ -1,6 +1,6 @@
 {
   "name": "flipr-yaml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flipr source to retrieve config from yaml files",
   "main": "lib/flipr-yaml.js",
   "scripts": {
@@ -38,7 +38,6 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^2.1.1",
-    "flipr-validation": "../node-flipr-validation",
     "istanbul": "^0.3.7",
     "jshint": "^2.6.3",
     "mocha": "^2.2.1",
@@ -50,6 +49,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "async-ext": "^0.4.0",
+    "flipr-validation": "^1.0.0",
     "js-yaml": "^3.2.7",
     "lodash": "^3.5.0",
     "memoizee": "^0.3.8"
