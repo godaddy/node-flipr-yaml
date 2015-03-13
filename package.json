@@ -4,14 +4,13 @@
   "description": "Flipr source to retrieve config from yaml files",
   "main": "lib/flipr-yaml.js",
   "scripts": {
-    "_cover": "istanbul cover --root lib --include-all-sources --report text-summary _mocha",
     "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "lint": "jshint .",
     "open-coverage": "open ./coverage/index.html",
     "report": "istanbul report html && istanbul report text-summary",
     "test-debug": "mocha --debug-brk",
     "test": "npm run lint && npm run unit && npm run report && (npm run check-coverage || npm run open-coverage)",
-    "unit": "npm run _cover -- --dir coverage/unit -- --recursive test"
+    "unit": "istanbul cover --root lib --include-all-sources --report text-summary _mocha"
   },
   "repository": {
     "type": "git",
