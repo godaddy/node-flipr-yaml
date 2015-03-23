@@ -2,6 +2,7 @@ node-flipr-yaml
 ============
 
 [![NPM](https://nodei.co/npm/flipr-yaml.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/flipr-yaml/)
+
 [![Build Status](https://travis-ci.org/godaddy/node-flipr-yaml.svg)](https://travis-ci.org/godaddy/node-flipr-yaml)
 
 **Stability: 1 - Experimental** 
