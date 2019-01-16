@@ -1,16 +1,12 @@
 {
   "name": "flipr-yaml",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Flipr source to retrieve config from yaml files",
   "main": "lib/flipr-yaml.js",
   "scripts": {
-    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
-    "lint": "jshint .",
-    "open-coverage": "open ./coverage/index.html",
-    "report": "istanbul report html && istanbul report text-summary",
-    "test-debug": "mocha --debug-brk",
-    "test": "npm run lint && npm run unit && npm run report && (npm run check-coverage || npm run open-coverage)",
-    "unit": "istanbul cover --root lib --include-all-sources --report text-summary _mocha"
+    "lint": "eslint --fix lib/",
+    "test": "npm run lint && npm run unit",
+    "unit": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,7 +17,6 @@
     "source",
     "yaml",
     "feature",
-    "ab",
     "flags",
     "configuration",
     "config",
@@ -36,21 +31,43 @@
   "bugs": "https://github.com/godaddy/node-flipr-yaml/issues",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^2.1.1",
-    "istanbul": "^0.3.7",
-    "jshint": "^2.6.3",
-    "mocha": "^2.2.1",
-    "mocha-istanbul": "^0.2.0",
-    "proxyquire": "^1.4.0",
-    "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0"
   },
   "dependencies": {
-    "async": "^0.9.0",
-    "async-ext": "^0.4.0",
     "flipr-validation": "^1.0.0",
-    "js-yaml": "^3.2.7",
-    "lodash": "^3.5.0",
-    "memoizee": "^0.3.8"
+    "globby": "^9.0.0",
+    "js-yaml": "^3.12.1",
+    "p-memoize": "^2.1.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "jasmine": true,
+      "jest": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+      "consistent-return": 0
+    }
+  },
+  "jest": {
+    "resetMocks": true,
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "roots": [
+      "<rootDir>/lib/"
+    ],
+    "testEnvironment": "node"
   }
 }

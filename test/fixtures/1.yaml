@@ -1,0 +1,9 @@
+---
+key1:
+  description: >
+    Some description
+  value: someValue1
+key11:
+  description: >
+    Some description
+  value: someValue11

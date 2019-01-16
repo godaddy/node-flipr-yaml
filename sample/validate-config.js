@@ -1,40 +1,37 @@
-'use strict';
+const FliprYaml = require('../lib/flipr-yaml');
 
-var fliprYaml = require('../lib/flipr-yaml');
+const rules = [
+  {
+    type: 'equal',
+    input: 'foo',
+    property: 'someFlag'
+  },
+  {
+    type: 'list',
+    input: 'foo',
+    property: 'userIds'
+  },
+  {
+    type: 'percent',
+    input: 'foo'
+  }
+];
 
-var source = fliprYaml({
-  folderPath: 'sample/config/',
-  fileName: 'validate-config.yaml',
-  rules: [
-    {
-      type: 'equal',
-      input: 'foo',
-      property: 'someFlag'
-    },
-    {
-      type: 'list',
-      input: 'foo',
-      property: 'userIds'
-    },
-    {
-      type: 'percent',
-      input: 'foo'
+const source = new FliprYaml({
+  filePath: 'sample/config/validate-config.yaml',
+});
+
+source.validateConfig(rules).then(
+  (errors) => {
+    if (errors.length) {
+      console.log('Errors detected in config');
+      console.log(errors);
+    } else {
+      console.log('Config is valid');
     }
-  ]
-});
-
-source.validateConfig(function(err, errors){
-  //'err' will be populated with an error that indicates
-  //validation failed for some unexpected reason.
-  //'errors' will either be undefined if no errors were encountered
-  //or it will be an array of Error objects.
-  if(err) {
+  },
+  (err) => {
     console.log('Unexpected error encountered during validation');
-    return void console.dir(err);
-  }
-  if(errors) {
-    console.log('Config is invalid!  See errors below.');
-    return void console.dir(errors);
-  }
-  console.log('No errors encountered, the config is valid!');
-});
+    console.log(err);
+  },
+);
