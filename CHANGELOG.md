@@ -11,6 +11,7 @@
 
 ### Breaking Changes
 
+- Drop support for node < v8.3
 - Default export is now a `FliprYaml` class
 - Removed most options, now just has `filePath` (string, array), and `duplicateKeysOverride` (bool)
 

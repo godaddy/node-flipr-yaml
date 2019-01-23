@@ -30,6 +30,9 @@
   "homepage": "https://github.com/godaddy/node-flipr-yaml",
   "bugs": "https://github.com/godaddy/node-flipr-yaml/issues",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.3.0"
+  },
   "devDependencies": {
     "eslint": "^5.12.0",
     "eslint-config-airbnb-base": "^13.1.0",
