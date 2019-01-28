@@ -1,0 +1,6 @@
+--- # This is config shared across environments
+secretServiceUrl:
+  description: >
+    This is a url to reach the super secret
+    service that does super secret things.
+  value: http://www.godaddy.com/secretservice

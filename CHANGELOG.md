@@ -1,3 +1,20 @@
+## v2.0.0 (January 23, 2019)
+
+### Features and Improvements
+
+- ES6+ rewrite
+- Now supports async/await
+- Now supports globs and multiple file paths
+- Lots of cleanup and prep work for more features
+- `jest` for testing
+- `eslint` for linting
+
+### Breaking Changes
+
+- Drop support for node < v8.3
+- Default export is now a `FliprYaml` class
+- Removed most options, now just has `filePath` (string, array), and `duplicateKeysOverride` (bool)
+
 ## v1.0.1 (March 12, 2015)
 
 Bug Fixes:

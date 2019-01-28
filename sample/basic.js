@@ -1,12 +1,10 @@
-'use strict';
+const FliprYaml = require('../lib/flipr-yaml');
 
-var FliprYaml = require('../lib/flipr-yaml');
-
-var source = new FliprYaml({
-  folderPath: 'sample/config/',
-  fileName: 'basic.yaml'
+const source = new FliprYaml({
+  filePath: 'sample/config/basic.yaml',
 });
 
-source.getConfig(function(err, config){
-  console.dir(config);
-});
+source.getConfig().then(
+  config => console.log(JSON.stringify(config, null, 2)),
+  err => console.dir(err),
+);

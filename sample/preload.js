@@ -1,12 +1,10 @@
-'use strict';
+const FliprYaml = require('../lib/flipr-yaml');
 
-var fliprYaml = require('../lib/flipr-yaml');
-
-var source = fliprYaml({
-  folderPath: 'sample/config/',
-  fileName: 'basic.yaml'
+const source = new FliprYaml({
+  filePath: 'sample/config/basic.yaml',
 });
 
-source.preload(function(){
-  console.log('Config file is loaded and cached!');
-});
+source.preload()
+  .then(() => {
+    console.log('Config file has been read and cached. Useful to call during app warmup.');
+  });
