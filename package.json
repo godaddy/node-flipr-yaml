@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "flipr-validation": "^2.0.0",
-    "globby": "^9.0.0",
+    "globby": "^9.2.0",
     "js-yaml": "^3.12.1",
     "p-memoize": "^2.1.0"
   },
