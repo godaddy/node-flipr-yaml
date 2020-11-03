@@ -1,3 +1,9 @@
+## v2.0.1 (November 3, 2020)
+
+### Features and Improvements
+
+- Updated dependencies
+
 ## v2.0.0 (January 28, 2019)
 
 ### Features and Improvements
